@@ -38,3 +38,15 @@ figure {
   background-color: rgb(0, 0, 0);
   color: white;
 }
+.fa-sun {
+  color: white;
+}
+
+#toggleThemeBtn {
+  border: none;
+  background-color: transparent;
+}
+
+#toggleThemeBtn:hover {
+  cursor: pointer;
+}

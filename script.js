@@ -1,3 +1,8 @@
-for (let i = 0; i < array.length; i++) {
-  const element = array[i];
-}
+document.getElementById('toggleTheme').addEventListener('click', () => {
+  toggletheme();
+});
+
+const toggletheme = () => {
+  const body = document.body;
+  body.classList.toggle('dark-mode');
+};

@@ -1,3 +1,35 @@
-body {
-  background-color: rgb(135, 123, 123);
+.img-gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 1100px;
+  margin: 0 auto;
+  justify-content: center;
+}
+.large-image {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  margin: 5px;
+}
+
+.large-image-container {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.small-image {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  object-position: center;
+}
+
+figure {
+  margin: 0;
+  display: contents;
 }

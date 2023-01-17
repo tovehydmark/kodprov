@@ -1,26 +1,41 @@
-/* LARGE DESKTOP LAYOUT */
+/**
+ The CSS is written for desktop first. You will find media queries at the bottom of the document for responsive designs for smaller devices.
+ */
 
 body {
   margin: 0;
   position: relative;
+  font-family: 'Roboto', sans-serif;
 }
 
-/* HEADER */
+h1,
+h2 {
+  font-family: 'Roboto Slab', serif;
+}
+/* ==========================================================================
+  HEADER
+   ========================================================================== */
 header {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   display: flex;
-  width: 80%;
+  width: 1000px;
   margin: 0 auto;
   justify-content: space-between;
 }
 header h2 {
   margin: 0;
+  padding-top: 20px;
+  color: rgb(255, 120, 58);
 }
 
-/* MAIN */
+/* ==========================================================================
+  MAIN
+   ========================================================================== */
+
+/*Hero section*/
 
 .hero {
   background-image: url('images/hero.jpg');
@@ -29,20 +44,37 @@ header h2 {
   background-position: center;
 }
 
+.hero-dark {
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+}
+
 .hero-content {
   padding-top: 100px;
   padding-bottom: 50px;
   margin: 0 auto;
   width: 1000px;
 }
+.hero-content button {
+  background-color: rgb(255, 120, 58);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem;
+}
 
-h1 {
+.hero-content h1 {
   font-size: 6rem;
   margin: 0;
 }
 
 .hero-content p {
   width: 55%;
+}
+
+/*Gallery section*/
+main h2 {
+  text-align: center;
+  padding: 20px 0;
 }
 
 .img-gallery {
@@ -53,12 +85,6 @@ h1 {
   margin: 0 auto;
   justify-content: center;
 }
-.large-image {
-  object-fit: cover;
-  object-position: center;
-  width: 100%;
-  margin: 5px;
-}
 
 .image-container {
   width: 500px;
@@ -67,6 +93,12 @@ h1 {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+}
+.large-image {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  margin: 5px;
 }
 
 .small-image {
@@ -94,11 +126,13 @@ figure {
   background-color: transparent;
 }
 
-#toggleThemeBtn:hover {
+button:hover {
   cursor: pointer;
 }
 
-/* FOOTER */
+/* ==========================================================================
+  FOOTER
+   ========================================================================== */
 
 footer {
   width: 100%;
@@ -110,8 +144,15 @@ footer p {
   padding-top: 70px;
 }
 
-/* SMALL DESKTOP LAYOUT */
+/* ==========================================================================
+  MEDIA QUERIES
+   ========================================================================== */
+
+/* SMALL DESKTOP*/
 @media screen and (max-width: 1200px) {
+  header {
+    width: 900px;
+  }
   /*Resize gallery*/
   .img-gallery {
     width: 900px;
@@ -121,8 +162,8 @@ footer p {
     height: 450px;
   }
   .small-image {
-    width: 220px;
-    height: 220px;
+    width: 215px;
+    height: 215px;
   }
 
   /*Resize content on hero*/
@@ -134,8 +175,11 @@ footer p {
   }
 }
 
-/* LARGE TABLET LAYOUT */
+/* LARGE TABLET */
 @media screen and (max-width: 1000px) {
+  header {
+    width: 700px;
+  }
   /*Resize gallery*/
   .img-gallery {
     width: 700px;
@@ -145,14 +189,14 @@ footer p {
     height: 350px;
   }
   .small-image {
-    width: 170px;
-    height: 170px;
+    width: 165px;
+    height: 165px;
   }
   /*Resize content on hero*/
   .hero-content {
     width: 700px;
   }
-  h1 {
+  .hero-content h1 {
     font-size: 5rem;
   }
   .hero-content p {
@@ -160,8 +204,11 @@ footer p {
   }
 }
 
-/* LARGE TABLET LAYOUT */
+/* TABLET */
 @media screen and (max-width: 800px) {
+  header {
+    width: 500px;
+  }
   /*Resize gallery*/
   .img-gallery {
     width: 500px;
@@ -171,14 +218,14 @@ footer p {
     height: 250px;
   }
   .small-image {
-    width: 120px;
-    height: 120px;
+    width: 115px;
+    height: 115px;
   }
   /*Resize content on hero*/
   .hero-content {
     width: 500px;
   }
-  h1 {
+  .hero-content h1 {
     font-size: 4rem;
   }
   .hero-content p {
@@ -186,8 +233,11 @@ footer p {
   }
 }
 
-/* TABLET LAYOUT */
+/* SMALL TABLET */
 @media screen and (max-width: 600px) {
+  header {
+    width: 400px;
+  }
   /*Resize gallery*/
   .img-gallery {
     width: 400px;
@@ -205,7 +255,7 @@ footer p {
   .hero-content {
     width: 400px;
   }
-  h1 {
+  .hero-content h1 {
     font-size: 3rem;
   }
   .hero-content p {
@@ -213,8 +263,11 @@ footer p {
   }
 }
 
-/* MOBILE LAYOUT */
+/* MOBILE */
 @media screen and (max-width: 450px) {
+  header {
+    width: 370px;
+  }
   /*Resize gallery*/
   .img-gallery {
     width: 370px;
